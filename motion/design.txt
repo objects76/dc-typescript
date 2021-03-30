@@ -1,0 +1,57 @@
+
+
+디자인 영감 Dribble: https://dribbble.com/shots/14931899-TIGERS
+
+백그라운드 이미지 만드는 사이트: https://coolbackgrounds.io/
+
+저의 백그라운드 이미지는 아래 첨부파일 다운로드 받아 보세요 :) 
+
+
+
+프로젝트 전반적으로 쓰인 모든 색상 코드들:
+
+:root {
+  --bg-main-color: #00000080;
+  --bg-accent-color: #2d2d2d;
+  --accent-color: #f64435;
+  --text-accent-color: #ffe498;
+  --text-edit-bg-color: #575757;
+  --border-color: #3f3f3f;
+  --shadow-color: #202020;
+  --document-bg-color: #68686850;
+  --component-bg-gradient: radial-gradient(circle, #646464e6 0%, #363636e6 100%);
+  --smokywhite: #dddbd8;
+  --black: #000000;
+  --translucent-black: #00000099;
+}
+
+
+random image generator: https://picsum.photos/
+  https://picsum.photos/300/200
+
+1. features?
+  - single page.
+  - image note
+  - text note
+  - todo note.
+  - input dialog
+  - youtube note.
+  - note dragging.
+  - delete note
+
+2. roadmap - divide, mildstone(releasable)
+  1. must have 
+  - image note
+  - text note
+  - todo note.
+  - input dialog
+  - delete note
+
+  2. good to have
+  - youtube note.
+  - apply fancy design
+
+  3. nice to have
+  - note dragging.
+
+

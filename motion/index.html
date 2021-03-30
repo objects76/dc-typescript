@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="input.css" />
+    <title>Motion</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1>MOTION</h1>
+      <div class="button-container">
+        <button class="button" onclick="openForm('url')">+ Image</button>
+        <button class="button" onclick="openForm('url')">+ Youtube</button>
+        <button class="button" onclick="openForm('Note')">+ Note</button>
+        <button class="button" onclick="openForm('Todo')">+ Todo</button>
+      </div>
+      <div class="form-popup" id="myForm">
+        <form class="form-container" onsubmit="handleSubmit(event)">
+          <label for="title"><b>Title</b></label>
+          <input type="text" placeholder="Enter title" name="title" required />
+
+          <label for="body" id="body-label"><b>Text</b></label>
+          <input type="text" placeholder="Enter Text" name="body" required />
+
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+      <script>
+        function openForm(type) {
+          document.getElementById("body-label").innerText = type;
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+        function handleSubmit(e) {
+          e.preventDefault();
+          let form = e.target.elements;
+          let title = form.title.value;
+          let body = form.body.value;
+          console.log(title, body);
+          closeForm();
+
+          //addUrlSection(title, body);
+          addTextSection(title, body);
+          alert("new item is added");
+          return false;
+        }
+      </script>
+    </header>
+    <doc class="doc">
+      <!-- sample sections -->
+      <section class="section-url">
+        <img src="https://picsum.photos/300/200" alt="img" />
+        <h1>title here</h1>
+        <button>delete</button>
+      </section>
+
+      <section class="section-url">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+        <h1>title here</h1>
+        <button>delete</button>
+      </section>
+
+      <section class="section-text">
+        <h1>title here</h1>
+        <p>multiple text here</p>
+        <button>delete</button>
+      </section>
+      <script>
+        function addUrlSection(title, url) {
+          const new_section = `
+            <section class="section-url">
+              <img src="${url}" alt="img" />
+              <h1>${title}</h1>
+              <button>delete</button>
+            </section>
+          `;
+          const doc = document.querySelector(".doc");
+          doc.innerHTML += new_section;
+        }
+        function addTextSection(title, text) {
+          const new_section = `
+            <section class="section-text">
+          <h1>${title}</h1>
+          <p>${text}</p>
+          <button>delete</button>
+        </section>`;
+          const doc = document.querySelector(".doc");
+          doc.innerHTML += new_section;
+        }
+      </script>
+    </doc>
+    <footer class="footer">Copyright by JJKIM</footer>
+  </body>
+  <script src="./build/main.js"></script>
+</html>

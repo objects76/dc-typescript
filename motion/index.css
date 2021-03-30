@@ -1,0 +1,40 @@
+.body {
+  /* https://aboooks.tistory.com/165 */
+  background-color: gray;
+  background-image: url("./background-210125-235634.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5rem;
+}
+
+.header {
+  color: red;
+  border: solid green;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+
+.document {
+  border: solid yellow;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+.section-text {
+  display: flex;
+  flex-direction: column;
+  border: solid cyan;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+.section-url {
+  display: flex;
+  border: solid cyan;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+
+.footer {
+  border: solid indigo;
+  text-align: center;
+  border-radius: 0.4rem;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- window/global in browser/nodejs
+      => symbol conflict.
+      module: filescope, can't access other modules codes.
+        to using codes in others : import/export
+     -->
+    <script>
+      var indent = "-";
+    </script>
+    <script type="module" src="10-3-module1.js"></script>
+    <script type="module" src="10-3-module2.js"></script>
+  </head>
+  <body></body>
+</html>
